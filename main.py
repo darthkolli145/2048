@@ -70,21 +70,6 @@ def main(game_board: [[int, ], ]) -> [[int, ], ]:
             if prev_board != game_board:
                 new_piece = generate_piece(game_board)
                 game_board[new_piece['row']][new_piece['column']] = new_piece['value']
-        # TODO: UPDATE/ADD PIECE TO BOARD
-        # place a random piece on the board
-        # check to see if the game is over using the game_over function
-
-        # TODO: Show updated board using the print_board function
-
-        # TODO: GET AND EXECUTE USER MOVE
-        # Take input until the user's move is a valid key
-        # if the user quits the game, print Goodbye and stop the Game Loop
-        # User's Move Loop:
-            # Execute the user's move
-            # Compare board before user's move & after user's move
-                # get and execute another move if board has not changed
-
-        # Check if the user wins
     if game_over(game_board):
         print_board(game_board)
     print("Goodbye")    
@@ -187,9 +172,6 @@ def game_over(game_board: [[int, ], ]) -> bool:
                 return False
             if game_board[i][j] == 2048:
                 return True
-
-    # TODO: Loop over the board and determine if the game is over
-    # TODO: Don't always return false
     return True
 
 
